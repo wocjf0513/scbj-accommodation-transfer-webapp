@@ -12,6 +12,11 @@
  |                             상품 생성<br/>예약/구매 내역 조회<br/>결제<br/>크롤링                               |                              인프라<br/>CI&CD<br/>알림<br/>회원                               |                      상품 검색<br/>판매/구매 내역 조회<br/>메인 페이지<br/>거래 상세 조회                      |                         상품 상세 조회<br/>상품 삭제<br/> 결제<br/>결제 페이지 조회<br/>크롤링                          |
 
 ## :movie_camera: 시연 영상
+[숙취방지 앱 시연 영상](https://github.com/wocjf0513/scbj-accommodation-transfer-system/assets/59725406/6bc59b58-a862-4729-b716-73cb367692ae)
+
+## 💭 프로젝트 후기
+[패스트캠퍼스X야놀자: 백엔드 개발 부트캠프 파이널 프로젝트](https://blog.naver.com/wocjf0513/223341119477)
+
 
 
 ## 🥺 RestDocs
@@ -42,6 +47,20 @@ Infra & ThirdParty</br>
 
 ## ARCHITECTURE
 ![숙취방지 최종 ARCHITECTURE](https://github.com/SCBJ-7/SCBJ-BE/assets/63856521/74661494-beb8-4ae7-a7d5-d864b4ac64dc)
+
+## 알림도메인 with FCM, EmailSender, Async
+![image](https://github.com/wocjf0513/scbj-accommodation-transfer-system/assets/59725406/476dbc2d-bda0-4ff0-bc69-310418a949cf)
+![image](https://github.com/wocjf0513/scbj-accommodation-transfer-system/assets/59725406/0545181d-cd29-48de-96e5-b1012d5e5ac6)
+![image](https://github.com/wocjf0513/scbj-accommodation-transfer-system/assets/59725406/89899760-ae93-4b62-aa88-1273a7068e6c)
+
+
+**사용자 경험을 위해서 다음과 같은 서비스를 제공한다.**
+```java
+if (FCM 푸쉬 알림 서비스가 실패했을 경우) 
+   재시도를 하고
+if (이마저도 실패했을 경우)
+   메일 전송 서비스를 제공했다.
+```
 
 ## 결제도메인 with 동시성제어
 - 카카오페이 로직
