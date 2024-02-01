@@ -11,6 +11,8 @@
 |                              [양유림](https://github.com/YurimYang)                               |                          [심재철](https://github.com/wocjf0513)                           |                          [김정훈](https://github.com/Aleexender)                           |                             [권민우](https://github.com/Kwonminwoo)                             |
  |                             상품 생성<br/>예약/구매 내역 조회<br/>결제<br/>크롤링                               |                              인프라<br/>CI&CD<br/>알림<br/>회원                               |                      상품 검색<br/>판매/구매 내역 조회<br/>메인 페이지<br/>거래 상세 조회                      |                         상품 상세 조회<br/>상품 삭제<br/> 결제<br/>결제 페이지 조회<br/>크롤링                          |
 
+## :movie_camera: 시연 영상
+
 
 ## 🥺 RestDocs
 - SCBJ Application을 실행시키시면, index.html을 통해 확인하실 수 있습니다 😄
@@ -34,7 +36,23 @@ Infra & ThirdParty</br>
 <img src="https://img.shields.io/badge/Kakao Pay-FFCD00?style=for-the-badge&logo=KakaoTalk&logoColor=white">
 
 
-## ⌨️ 설정 
+## ERD
+![(정리용) 숙취방지 최종 ERD - v1 (1)](https://github.com/SCBJ-7/SCBJ-BE/assets/63856521/8a6a60f0-333e-4569-b217-0b9c514d7389)
+
+
+## ARCHITECTURE
+![숙취방지 최종 ARCHITECTURE](https://github.com/SCBJ-7/SCBJ-BE/assets/63856521/74661494-beb8-4ae7-a7d5-d864b4ac64dc)
+
+## 결제도메인 with 동시성제어
+- 카카오페이 로직
+
+  ![숙취방지-결제도메인 drawio](https://github.com/SCBJ-7/SCBJ-BE/assets/63856521/e4cce2d3-3c1d-42d6-9f51-caa34b0a6e06)
+- Optimisitc Lock을 활용한 동시성 제어 : https://github.com/SCBJ-7/SCBJ-BE/discussions/309
+- Pessimistic Lock을 활용한 동시성 제어 : https://github.com/SCBJ-7/SCBJ-BE/discussions/310
+- Lettuce(Redis)를 활용한 동시성 제어 : https://github.com/SCBJ-7/SCBJ-BE/discussions/312
+- Redisson(Redis)을 활용한 동시성 제어 : https://github.com/SCBJ-7/SCBJ-BE/discussions/311
+
+## ⌨️ 설정
 - 자바 버전: 17
 
 - 스프링 버전: 6.0
@@ -76,7 +94,7 @@ Infra & ThirdParty</br>
 
 - Thymeleaf
   - `org.springframework.boot:spring-boot-starter-thymeleaf`
-  
+
 - Redisson
   - `org.redisson:redisson-spring-boot-starter:3.21.1`
 
@@ -86,19 +104,3 @@ Infra & ThirdParty</br>
 
 - Scheduling
   - `org.quartz-scheduler:quartz:2.3.0`
-
-## ERD
-![(정리용) 숙취방지 최종 ERD - v1 (1)](https://github.com/SCBJ-7/SCBJ-BE/assets/63856521/8a6a60f0-333e-4569-b217-0b9c514d7389)
-
-
-## ARCHITECTURE
-![숙취방지 최종 ARCHITECTURE](https://github.com/SCBJ-7/SCBJ-BE/assets/63856521/74661494-beb8-4ae7-a7d5-d864b4ac64dc)
-
-## 결제도메인 with 동시성제어
-- 카카오페이 로직
-
-  ![숙취방지-결제도메인 drawio](https://github.com/SCBJ-7/SCBJ-BE/assets/63856521/e4cce2d3-3c1d-42d6-9f51-caa34b0a6e06)
-- Optimisitc Lock을 활용한 동시성 제어 : https://github.com/SCBJ-7/SCBJ-BE/discussions/309
-- Pessimistic Lock을 활용한 동시성 제어 : https://github.com/SCBJ-7/SCBJ-BE/discussions/310
-- Lettuce(Redis)를 활용한 동시성 제어 : https://github.com/SCBJ-7/SCBJ-BE/discussions/312
-- Redisson(Redis)을 활용한 동시성 제어 : https://github.com/SCBJ-7/SCBJ-BE/discussions/311
