@@ -19,6 +19,13 @@
 
 
 
+2023-11-20 ~ 2023-12-01
+
+## 🔗 배포 링크
+
+- BE: [https://3.34.147.187.nip.io/](https://3.34.147.187.nip.io/)
+- FE: [https://shimpyo.netlify.app/](https://percenthotel.web.app/)
+
 ## 🥺 RestDocs
 - SCBJ Application을 실행시키시면, index.html을 통해 확인하실 수 있습니다 😄
 - Index.html : https://3.34.147.187.nip.io/docs/index.html 
@@ -70,6 +77,7 @@ if (이마저도 실패했을 경우)
 - Pessimistic Lock을 활용한 동시성 제어 : https://github.com/SCBJ-7/SCBJ-BE/discussions/310
 - Lettuce(Redis)를 활용한 동시성 제어 : https://github.com/SCBJ-7/SCBJ-BE/discussions/312
 - Redisson(Redis)을 활용한 동시성 제어 : https://github.com/SCBJ-7/SCBJ-BE/discussions/311
+
 
 ## ⌨️ 설정
 - 자바 버전: 17
