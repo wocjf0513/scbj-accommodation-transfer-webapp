@@ -55,29 +55,53 @@ Infra & ThirdParty</br>
 ## ARCHITECTURE
 ![숙취방지 최종 ARCHITECTURE](https://github.com/SCBJ-7/SCBJ-BE/assets/63856521/74661494-beb8-4ae7-a7d5-d864b4ac64dc)
 
-## 알림도메인 with FCM, EmailSender, Async
-![image](https://github.com/wocjf0513/scbj-accommodation-transfer-system/assets/59725406/476dbc2d-bda0-4ff0-bc69-310418a949cf)
-![image](https://github.com/wocjf0513/scbj-accommodation-transfer-system/assets/59725406/0545181d-cd29-48de-96e5-b1012d5e5ac6)
+## :100: 숙취 방지의 자랑
 ![image](https://github.com/wocjf0513/scbj-accommodation-transfer-system/assets/59725406/89899760-ae93-4b62-aa88-1273a7068e6c)
+> 숙취 방지는 사용저 경험을 고려해서 위와 같은 서비스를 제공합니다!
+
+### :alarm_clock: FCM 선택 이유
+![image](https://github.com/wocjf0513/scbj-accommodation-transfer-system/assets/59725406/476dbc2d-bda0-4ff0-bc69-310418a949cf)
+> 숙취 방지 푸쉬 알림 특징
+1. 어느 정도의 지연 시간이 허용됨.
+2. 서버 -> 클라이언트 (단방향 통신)
+
+![image](https://github.com/wocjf0513/scbj-accommodation-transfer-system/assets/59725406/0545181d-cd29-48de-96e5-b1012d5e5ac6)
+> 단방향 통신의 대표적인 방법인 FCM과 SSE를 비교
+- SSE보다는 FCM이 호환성이 좋기에 확장성에서 뛰어남.
+- 네트워크 연결된 상태를 유지하지 않아 서버 리소스를 효율적이게 사용.
 
 
-**사용자 경험을 위해서 다음과 같은 서비스를 제공한다.**
-```java
-if (FCM 푸쉬 알림 서비스가 실패했을 경우) 
-   재시도를 하고
-if (이마저도 실패했을 경우)
-   메일 전송 서비스를 제공했다.
-```
-
-## 결제도메인 with 동시성제어
-- 카카오페이 로직
-
-  ![숙취방지-결제도메인 drawio](https://github.com/SCBJ-7/SCBJ-BE/assets/63856521/e4cce2d3-3c1d-42d6-9f51-caa34b0a6e06)
-- Optimisitc Lock을 활용한 동시성 제어 : https://github.com/SCBJ-7/SCBJ-BE/discussions/309
-- Pessimistic Lock을 활용한 동시성 제어 : https://github.com/SCBJ-7/SCBJ-BE/discussions/310
-- Lettuce(Redis)를 활용한 동시성 제어 : https://github.com/SCBJ-7/SCBJ-BE/discussions/312
-- Redisson(Redis)을 활용한 동시성 제어 : https://github.com/SCBJ-7/SCBJ-BE/discussions/311
-
+## :mountain: 추후 고도화 사항
+- 심재철
+  - 멤버 도메인 (Spring Security + JWT)
+  
+  ![img.png](src%2Fmain%2Fresources%2Fstatic%2Fimg%2Fimg.png)
+  ```markdown
+  이번 프로젝트에서 사용되는
+  Filter가 여러 가지가 될 수 있음에도 (추후 개발을 하면서)
+  
+  위와 같은 구조를 두지 않고
+  JWT Filter를 하나만 등록해 사용했다.
+  
+  그러다보니 Filter가 생길 수록 관리하기 힘들어졌고
+  확장성면에서 좋지 않은 구조로 짰다.
+  
+  프로젝트를 끝내고, 24. 02. 10일부터 다시하기로 했으니
+  위와 같은 구조로서 확장성을 확보하고자 한다.
+  ```
+  - 알람 도메인
+  ```markdown
+  PM측의 부탁으로
+  알림에 대한 추가 구현 사항이 생겼다.
+  
+  결제된 상품에 대한 체크인 임박 푸쉬 알림을 보내는 것이었다.
+  이를 위해 매 분 스케줄링을 하며, 체크인 임박이 된 상품을 조회했다.
+  그러다보니, 서버 리소스를 많이 잡게 됐고,
+  
+  알림 도메인만 따로 구성한 서버를 둬, MSA구조를 두고자 한다.
+  또한, SpringBatch를 통해 효율적으로 일괄 처리가 되게끔 한다. 
+  ```
+## :thinking: [숙취방지가 있기에 Discussions](https://github.com/SCBJ-7/SCBJ-BE/discussions)
 
 ## ⌨️ 설정
 - 자바 버전: 17
