@@ -31,7 +31,7 @@
 ## 🔗 배포 링크
 
 - BE: [https://3.34.147.187.nip.io/](https://3.34.147.187.nip.io/)
-- FE: [https://shimpyo.netlify.app/](https://percenthotel.web.app/)
+- FE: [https://percenthotel.web.app/](https://percenthotel.web.app/)
 
 
 ## 🥺 RestDocs
