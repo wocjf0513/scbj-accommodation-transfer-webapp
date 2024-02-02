@@ -10,6 +10,14 @@
 |    <img src="https://avatars.githubusercontent.com/u/63856521?v=4" width=140px alt="양유림"/>     | <img src="https://avatars.githubusercontent.com/u/59725406?v=4" width=140px alt="심재철"> | <img src="https://avatars.githubusercontent.com/u/111270670?v=4" width=140px alt="김정훈"> |   <img src="https://avatars.githubusercontent.com/u/34360434?v=4" width=140px alt="권민우"/>    |
 |                              [양유림](https://github.com/YurimYang)                               |                          [심재철](https://github.com/wocjf0513)                           |                          [김정훈](https://github.com/Aleexender)                           |                             [권민우](https://github.com/Kwonminwoo)                             |
  |                             상품 생성<br/>예약/구매 내역 조회<br/>결제<br/>크롤링                               |                              인프라<br/>CI&CD<br/>알림<br/>회원                               |                      상품 검색<br/>판매/구매 내역 조회<br/>메인 페이지<br/>거래 상세 조회                      |                         상품 상세 조회<br/>상품 삭제<br/> 결제<br/>결제 페이지 조회<br/>크롤링                          |
+## :hotel: 개요
+`취소·환불이 불가한 숙박 결제건에 대해 양도를 할 수 있는 웹·앱`
+## :pencil2: 개발 배경
+- 예약 취소에 대한 불만이 많음, 유저의 착각/실수도 있으나 천재지변, 개인적 사유로 인해 어쩔 수 없이 취소수수료가 발생하는 경우 유저의 불만 및 탈퇴로 이어짐 
+- 예약 취소의 부정적 경험으로 인해 유저가 탈퇴하는 것을 막을 수 있는 방안으로 예약 취소 불가 상품을 해결할 수 있는 플랫폼 또는 기능 제공
+- 공급자와 기존 구매자, 양도자를 모두 고려한 안전하고 신뢰도 높은 예약 취소 거래 기능 구축
+- 예약 취소 수수료가 아닌 취소 예약건을 온전히 체크인 완료하면 매출 증대에 기여할 것으로 기대함
+
 
 ## :movie_camera: 시연 영상
 [숙취방지 앱 시연 영상](https://github.com/wocjf0513/scbj-accommodation-transfer-system/assets/59725406/6bc59b58-a862-4729-b716-73cb367692ae)
@@ -17,9 +25,8 @@
 ## 💭 프로젝트 후기
 [패스트캠퍼스X야놀자: 백엔드 개발 부트캠프 파이널 프로젝트](https://blog.naver.com/wocjf0513/223341119477)
 
-
-
-2023-11-20 ~ 2023-12-01
+## :alarm_clock: 프로젝트 기간
+`2023-11-20 ~ 2023-12-01`
 
 ## 🔗 배포 링크
 
@@ -101,7 +108,7 @@ Infra & ThirdParty</br>
   알림 도메인만 따로 구성한 서버를 둬, MSA구조를 두고자 한다.
   또한, SpringBatch를 통해 효율적으로 일괄 처리가 되게끔 한다. 
   ```
-## :thinking: [숙취방지가 있기에 Discussions](https://github.com/SCBJ-7/SCBJ-BE/discussions)
+### :thinking: [숙취방지가 있기위한 Discussions](https://github.com/SCBJ-7/SCBJ-BE/discussions)
 
 ## ⌨️ 설정
 - 자바 버전: 17
