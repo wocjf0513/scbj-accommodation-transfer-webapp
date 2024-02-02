@@ -117,7 +117,8 @@ Infra & ThirdParty</br>
 
 - 스프링 부트 버전: 3.2.1
 
-## ✨ 의존성
+
+<details><summary>✨의존성</summary>
 
 - Spring Boot Starter
 
@@ -162,3 +163,3011 @@ Infra & ThirdParty</br>
 
 - Scheduling
   - `org.quartz-scheduler:quartz:2.3.0`
+</details>
+
+
+
+## 📚 API Docs 
+   <details>
+    <summary>회원 API</summary>
+    <div id="content">
+<div class="sect1">
+<h2 id="_member_rest_api_docs">Member REST API Docs</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="sign-up">회원 가입</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>회원 가입하는 API 입니다.</p>
+</div>
+<div class="sect2">
+<h3 id="_httprequest">HttpRequest</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">POST /v1/members/signup HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Content-Length: 163
+Host: localhost:8080
+
+{
+  "email" : "test@gmail.com",
+  "password" : "test1234@",
+  "name" : "test",
+  "phone" : "010-1234-5678",
+  "privacyPolicy" : null,
+  "termOfUse" : null
+}</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>message</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">응답 메시지</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.id</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class java.lang.Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사용자 식별자</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.email</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class java.lang.Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사용자 이메일</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.name</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class java.lang.Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사용자 이름</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.phone</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class java.lang.Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사용자 핸드폰 번호</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.accountNumber</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class java.lang.Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사용자 계좌 번호</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.bank</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class java.lang.Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사용자 계좌</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.linkedToYanolja</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class java.lang.Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">야놀자 연동 여부</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_httpresponse">HttpResponse</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">HTTP/1.1 200 OK
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json;charset=UTF-8
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Length: 259
+
+{
+  "message" : "회원가입에 성공했습니다.",
+  "data" : {
+    "id" : 1,
+    "email" : "test@gmail.com",
+    "name" : "test",
+    "phone" : "010-1234-5678",
+    "accountNumber" : null,
+    "bank" : null,
+    "linkedToYanolja" : false
+  }
+}</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>message</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">응답 메시지</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.id</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class java.lang.Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사용자 식별자</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.email</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class java.lang.Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사용자 이메일</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.name</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class java.lang.Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사용자 이름</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.phone</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class java.lang.Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사용자 핸드폰 번호</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.accountNumber</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class java.lang.Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사용자 계좌 번호</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.bank</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class java.lang.Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사용자 계좌</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.linkedToYanolja</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class java.lang.Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">야놀자 연동 여부</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="sign-in">로그인</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>로그인하는 API 입니다.</p>
+</div>
+<div class="sect2">
+<h3 id="_httprequest_2">HttpRequest</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">POST /v1/members/signin HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Content-Length: 85
+Host: localhost:8080
+
+{
+  "email" : "test@gmail.com",
+  "password" : "test1234@",
+  "fcmToken" : null
+}</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>email</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class java.lang.String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사용자 이메일</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>password</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class java.lang.String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사용자 비밀번호</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>fcmToken</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class java.lang.String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사용자 기기 식별자 토큰</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_httpresponse_2">HttpResponse</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">HTTP/1.1 200 OK
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json;charset=UTF-8
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Length: 390
+
+{
+  "message" : "로그인에 성공했습니다.",
+  "data" : {
+    "memberResponse" : {
+      "id" : 1,
+      "email" : "test@gmail.com",
+      "name" : "test",
+      "phone" : "010-1234-5678",
+      "accountNumber" : null,
+      "bank" : null,
+      "linkedToYanolja" : false
+    },
+    "tokenResponse" : {
+      "accessToken" : "",
+      "refreshToken" : ""
+    }
+  }
+}</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>message</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">응답 메시지</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.memberResponse.id</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class java.lang.Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사용자 식별자</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.memberResponse.email</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class java.lang.Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사용자 이메일</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.memberResponse.name</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class java.lang.Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사용자 이름</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.memberResponse.phone</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class java.lang.Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사용자 핸드폰 번호</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.memberResponse.accountNumber</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class java.lang.Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사용자 계좌 번호</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.memberResponse.bank</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class java.lang.Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사용자 계좌</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.memberResponse.linkedToYanolja</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class java.lang.Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">야놀자 연동 여부</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.tokenResponse.accessToken</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class java.lang.String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">액세스 토큰</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.tokenResponse.refreshToken</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class java.lang.String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">리프레쉬 토큰</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="logout">로그아웃</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>로그아웃 API 입니다.</p>
+</div>
+<div class="sect2">
+<h3 id="_httprequest_3">HttpRequest</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">POST /v1/members/logout HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Authorization: ACCESS_TOKEN
+Content-Length: 64
+Host: localhost:8080
+
+{
+  "accessToken" : "Bearer ",
+  "refreshToken" : "Refresh"
+}</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Authorization</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JWT 액세스 토큰</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_httpresponse_3">HttpResponse</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">HTTP/1.1 200 OK
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json;charset=UTF-8
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Length: 75
+
+{
+  "message" : "로그아웃에 성공했습니다.",
+  "data" : null
+}</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>message</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">응답 메시지</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class java.lang.Object</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">응답 데이터</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="get-current-member">회원 정보 조회</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>사용자 본인의 회원 정보를 조회하는 API 입니다.</p>
+</div>
+<div class="sect2">
+<h3 id="_httprequest_4">HttpRequest</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">GET /v1/members HTTP/1.1
+Authorization: ACCESS_TOKEN
+Host: localhost:8080</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Authorization</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JWT 액세스 토큰</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_httpresponse_4">HttpResponse</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">HTTP/1.1 200 OK
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json;charset=UTF-8
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Length: 266
+
+{
+  "message" : "회원정보 조회에 성공했습니다.",
+  "data" : {
+    "id" : 1,
+    "email" : "test@gmail.com",
+    "name" : "test",
+    "phone" : "010-1234-5678",
+    "accountNumber" : null,
+    "bank" : null,
+    "linkedToYanolja" : false
+  }
+}</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>message</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">응답 메시지</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.id</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class java.lang.Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사용자 식별자</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.email</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class java.lang.Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사용자 이메일</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.name</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class java.lang.Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사용자 이름</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.phone</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class java.lang.Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사용자 핸드폰 번호</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.accountNumber</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class java.lang.Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사용자 계좌 번호</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.bank</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class java.lang.Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사용자 계좌</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.linkedToYanolja</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class java.lang.Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">야놀자 연동 여부</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="link-up-yanolja">야놀자 계정 연동</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>야놀자 계정을 연동하는 API 입니다.</p>
+</div>
+<div class="sect2">
+<h3 id="_httprequest_5">HttpRequest</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">POST /v1/members/yanolja HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Authorization: ACCESS_TOKEN
+Content-Length: 34
+Host: localhost:8080
+
+{
+  "email" : "test@gmail.com"
+}</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Authorization</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JWT 액세스 토큰</p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>email</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class java.lang.String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사용자 이메일</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_httpresponse_5">HttpResponse</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">HTTP/1.1 200 OK
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json;charset=UTF-8
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Length: 86
+
+{
+  "message" : "야놀자 계정 연동에 성공했습니다.",
+  "data" : null
+}</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>message</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">응답 메시지</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class java.lang.Object</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">응답 데이터</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="update-password">비밀번호 업데이트</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>비밀번호를 업데이트하는 API 입니다.</p>
+</div>
+<div class="sect2">
+<h3 id="_httprequest_6">HttpRequest</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">PATCH /v1/members/password HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Authorization: ACCESS_TOKEN
+Content-Length: 51
+Host: localhost:8080
+
+{
+  "email" : null,
+  "password" : "test1234@"
+}</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Authorization</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JWT 액세스 토큰</p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>password</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class java.lang.String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사용자 비밀번호</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>email</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class java.lang.String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사용자 이메일</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_httpresponse_6">HttpResponse</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">HTTP/1.1 200 OK
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json;charset=UTF-8
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Length: 82
+
+{
+  "message" : "비밀번호 변경에 성공했습니다.",
+  "data" : null
+}</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>message</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">응답 메시지</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class java.lang.Object</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">응답 데이터</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="update-account">계좌번호 등록/ 수정</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>계좌번호를 등록/ 수정하는 API 입니다.</p>
+</div>
+<div class="sect2">
+<h3 id="_httprequest_7">HttpRequest</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">PATCH /v1/members/account HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Authorization: ACCESS_TOKEN
+Content-Length: 60
+Host: localhost:8080
+
+{
+  "accountNumber" : "1233456783",
+  "bank" : "농협"
+}</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Authorization</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JWT 액세스 토큰</p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>accountNumber</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class java.lang.String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사용자 계좌 번호</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bank</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class java.lang.String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사용자 계좌</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_httpresponse_7">HttpResponse</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">HTTP/1.1 200 OK
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json;charset=UTF-8
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Length: 89
+
+{
+  "message" : "계좌번호 등록/수정에 성공했습니다.",
+  "data" : null
+}</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>message</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">응답 메시지</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class java.lang.Object</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">응답 데이터</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="update-phone">핸드폰 번호 업데이트</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>핸드폰 번호를 업데이트하는 API 입니다.</p>
+</div>
+<div class="sect2">
+<h3 id="_httprequest_8">HttpRequest</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">PATCH /v1/members/phone HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Authorization: ACCESS_TOKEN
+Content-Length: 33
+Host: localhost:8080
+
+{
+  "phone" : "010-1234-5678"
+}</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Authorization</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JWT 액세스 토큰</p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>phone</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class java.lang.String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사용자 핸드폰 번호</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_httpresponse_8">HttpResponse</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">HTTP/1.1 200 OK
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json;charset=UTF-8
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Length: 86
+
+{
+  "message" : "핸드폰 번호 변경에 성공했습니다.",
+  "data" : null
+}</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>message</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">응답 메시지</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class java.lang.Object</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">응답 데이터</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="update-name">이름 업데이트</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>이름을 업데이트하는 API 입니다.</p>
+</div>
+<div class="sect2">
+<h3 id="_httprequest_9">HttpRequest</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">PATCH /v1/members/name HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Authorization: ACCESS_TOKEN
+Content-Length: 23
+Host: localhost:8080
+
+{
+  "name" : "test"
+}</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Authorization</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JWT 액세스 토큰</p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>name</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class java.lang.String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사용자 이름</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_httpresponse_9">HttpResponse</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">HTTP/1.1 200 OK
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json;charset=UTF-8
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Length: 76
+
+{
+  "message" : "이름 변경에 성공했습니다.",
+  "data" : null
+}</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>message</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">응답 메시지</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class java.lang.Object</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">응답 데이터</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="refresh-access-token">액세스 토큰 재발급</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>액세스 토큰을 재발급하는 API 입니다.</p>
+</div>
+<div class="sect2">
+<h3 id="_httprequest_10">HttpRequest</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">POST /v1/token/refresh HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Content-Length: 64
+Host: localhost:8080
+
+{
+  "accessToken" : "Bearer ",
+  "refreshToken" : "Refresh"
+}</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>accessToken</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class java.lang.String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">만료된 액세스 토큰</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>refreshToken</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class java.lang.String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">리프레쉬 토큰</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_httpresponse_10">HttpResponse</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">HTTP/1.1 200 OK
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json;charset=UTF-8
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Length: 145
+
+{
+  "message" : "토큰 재발급에 성공했습니다.",
+  "data" : {
+    "accessToken" : "Bearer ",
+    "refreshToken" : "Refresh"
+  }
+}</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>message</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">응답 메시지</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.accessToken</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class java.lang.Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">재발급된 액세스 토큰</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.refreshToken</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class java.lang.Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">리프레쉬 토큰</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+   </details>
+   <details>
+    <summary>상품 API</summary>
+    <div id="content">
+<div class="sect1">
+<h2 id="_product_rest_api_docs">Product REST API DOCS</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="Product-Post">상품(양도글) 작성</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>상품(양도글)을 작성하는 API입니다.</p>
+</div>
+<div class="sect2">
+<h3 id="_httprequest">HttpRequest</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">POST /v1/products/1 HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Authorization: ACCESS_TOKEN
+Content-Length: 316
+Host: localhost:8080
+
+{
+  "firstPrice" : 250000,
+  "secondPrice" : 200000,
+  "bank" : "신한은행",
+  "accountNumber" : "110-499-519198",
+  "secondGrantPeriod" : 5,
+  "isRegistered" : true,
+  "standardTimeSellingPolicy" : true,
+  "totalAmountPolicy" : true,
+  "sellingModificationPolicy" : true,
+  "productAgreement" : true
+}</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. /v1/products/{reservation_id}</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Parameter</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>reservation_id</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">예약내역 식별자</p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>firstPrice</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1차 양도 가격</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>secondPrice</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2차 양도 가격</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bank</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">정산 은행</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>accountNumber</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">정산 계좌</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>secondGrantPeriod</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2차 양도 시점</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>isRegistered</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2차 양도 가격 설정 여부</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>standardTimeSellingPolicy</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">체크인 기준 판매 자동 완료 방침</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>totalAmountPolicy</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">정산 총액 확인 방침</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sellingModificationPolicy</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">판매가 수정 불가 방침</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>productAgreement</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">판매 진행 동의 방침</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_httpresponse">HttpResponse</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">HTTP/1.1 201 Created
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json;charset=UTF-8
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Length: 102
+
+{
+  "message" : "양도글 작성을 성공했습니다.",
+  "data" : {
+    "productId" : 1
+  }
+}</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>message</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">응답 메시지</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Object</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">응답 데이터</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.productId</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">상품 식별자</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="Get-detail-produt">상품 상세 조회</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>상품 상세 조회 API입니다.</p>
+</div>
+<div class="sect2">
+<h3 id="_httprequest_2">HttpRequest</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Authorization</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JWT 액세스 토큰</p></td>
+</tr>
+</tbody>
+</table>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">GET /v1/products/1 HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Authorization:
+Host: localhost:8080</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 2. /v1/products/{productId}</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Parameter</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>productId</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">상품 식별자</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_httpresponse_2">HttpResponse</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">HTTP/1.1 200 OK
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json;charset=UTF-8
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Length: 841
+
+{
+  "message" : "상품 상세 조회에 성공했습니다.",
+  "data" : {
+    "hotelName" : "호텔인 나인 강남",
+    "hotelImageUrlList" : [ "https://yaimg.yanolja.com/v5/2023/03/23/15/1280/641c76db5ab761.18136153.jpg" ],
+    "roomName" : "스탠다드 더블",
+    "checkIn" : "2024-01-29T11:50:01.2054366",
+    "checkOut" : "2024-01-29T11:50:01.2054366",
+    "originalPrice" : 200000,
+    "sellingPrice" : 100000,
+    "standardPeople" : 2,
+    "maxPeople" : 4,
+    "bedType" : "킹",
+    "roomTheme" : {
+      "parkingZone" : true,
+      "breakfast" : false,
+      "pool" : true,
+      "oceanView" : false
+    },
+    "hotelAddress" : "서울특별시 강남구 테헤란로 99길 9",
+    "hotelInfoUrl" : "https://place-site.yanolja.com/places/3001615",
+    "saleStatus" : true,
+    "isSeller" : false
+  }
+}</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>message</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">응답 메시지</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Object</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">응답 데이터</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.hotelName</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">호텔 이름</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.hotelImageUrlList[]</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Array</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">호텔 사진 리스트</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.roomName</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">객실 명</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.checkIn</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">체크인</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.checkOut</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">체크아웃</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.originalPrice</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">원가</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.sellingPrice</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">판매가</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.standardPeople</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">기준 인원</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.maxPeople</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">최대 인원</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.bedType</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">침대 타입</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.roomTheme</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Object</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">객실 테마</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.roomTheme.parkingZone</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">주차 가능</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.roomTheme.breakfast</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">조식 제공</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.roomTheme.pool</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">수영장</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.roomTheme.oceanView</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">오션 뷰</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.hotelAddress</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">호텔 주소</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.hotelInfoUrl</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">호텔 상세 정보 Url</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.saleStatus</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">판매 상태</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.isSeller</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">판매자 여부</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="delete-produt">상품 삭제</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>상품 삭제 API입니다.</p>
+</div>
+<div class="sect2">
+<h3 id="_httprequest_3">HttpRequest</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Authorization</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JWT 액세스 토큰</p></td>
+</tr>
+</tbody>
+</table>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">DELETE /v1/products/1 HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Authorization:
+Host: localhost:8080</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 3. /v1/products/{productId}</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Parameter</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>productId</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">상품 식별자</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_httpresponse_3">HttpResponse</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">HTTP/1.1 204 No Content
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json;charset=UTF-8
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Length: 76
+
+{
+  "message" : "상품 삭제에 성공했습니다.",
+  "data" : null
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="main-page-product">메인 페이지 API 문서화</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>메인 페이지에 표시될 상품들을 조회하는 API입니다.</p>
+</div>
+<div class="sect2">
+<h3 id="_httprequest_4">HttpRequest</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">GET /v1/products/main?size=10&amp;cityNames=%EC%84%9C%EC%9A%B8&amp;cityNames=%EA%B0%95%EC%9B%90&amp;cityNames=%EB%B6%80%EC%82%B0&amp;cityNames=%EC%A0%9C%EC%A3%BC&amp;cityNames=%EA%B2%BD%EC%83%81&amp;cityNames=%EC%A0%84%EB%9D%BC&amp;page=1 HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Host: localhost:8080</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Unresolved directive in product-api.adoc - include::C:\Users\wocjf\work\SCBJ-BE\build\generated-snippets/product-rest-controller-docs-test/main-page-product/request-parameters.adoc[]</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_httpresponse_4">HttpResponse</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">HTTP/1.1 200 OK
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json;charset=UTF-8
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Length: 3491
+
+{
+  "message" : "조회에 성공하였습니다",
+  "data" : {
+    "seoul" : [ {
+      "id" : 1,
+      "city" : "서울",
+      "imageUrl" : "image_url_seoul.jpg",
+      "hotelName" : "서울 호텔",
+      "roomType" : "더블",
+      "originalPrice" : 200000,
+      "salePrice" : 180000,
+      "salePercentage" : 10.0,
+      "checkInDate" : "2024-01-29T11:50:00.8883298",
+      "checkOutDate" : "2024-01-30T11:50:00.8883298"
+    } ],
+    "gangwon" : [ {
+      "id" : 1,
+      "city" : "서울",
+      "imageUrl" : "image_url_seoul.jpg",
+      "hotelName" : "서울 호텔",
+      "roomType" : "더블",
+      "originalPrice" : 200000,
+      "salePrice" : 180000,
+      "salePercentage" : 10.0,
+      "checkInDate" : "2024-01-29T11:50:00.8883298",
+      "checkOutDate" : "2024-01-30T11:50:00.8883298"
+    } ],
+    "busan" : [ {
+      "id" : 1,
+      "city" : "서울",
+      "imageUrl" : "image_url_seoul.jpg",
+      "hotelName" : "서울 호텔",
+      "roomType" : "더블",
+      "originalPrice" : 200000,
+      "salePrice" : 180000,
+      "salePercentage" : 10.0,
+      "checkInDate" : "2024-01-29T11:50:00.8883298",
+      "checkOutDate" : "2024-01-30T11:50:00.8883298"
+    } ],
+    "jeju" : [ {
+      "id" : 1,
+      "city" : "서울",
+      "imageUrl" : "image_url_seoul.jpg",
+      "hotelName" : "서울 호텔",
+      "roomType" : "더블",
+      "originalPrice" : 200000,
+      "salePrice" : 180000,
+      "salePercentage" : 10.0,
+      "checkInDate" : "2024-01-29T11:50:00.8883298",
+      "checkOutDate" : "2024-01-30T11:50:00.8883298"
+    } ],
+    "gyeongsang" : [ {
+      "id" : 1,
+      "city" : "서울",
+      "imageUrl" : "image_url_seoul.jpg",
+      "hotelName" : "서울 호텔",
+      "roomType" : "더블",
+      "originalPrice" : 200000,
+      "salePrice" : 180000,
+      "salePercentage" : 10.0,
+      "checkInDate" : "2024-01-29T11:50:00.8883298",
+      "checkOutDate" : "2024-01-30T11:50:00.8883298"
+    } ],
+    "jeolla" : [ {
+      "id" : 1,
+      "city" : "서울",
+      "imageUrl" : "image_url_seoul.jpg",
+      "hotelName" : "서울 호텔",
+      "roomType" : "더블",
+      "originalPrice" : 200000,
+      "salePrice" : 180000,
+      "salePercentage" : 10.0,
+      "checkInDate" : "2024-01-29T11:50:00.8883298",
+      "checkOutDate" : "2024-01-30T11:50:00.8883298"
+    } ],
+    "weekend" : {
+      "content" : [ {
+        "id" : 2,
+        "hotelName" : "주말 호텔",
+        "roomType" : "스위트",
+        "imageUrl" : "image_url_weekend.jpg",
+        "originalPrice" : 300000,
+        "salePrice" : 270000,
+        "salePercentage" : 10.0,
+        "checkInDate" : "2024-02-03",
+        "checkOutDate" : "2024-02-04",
+        "isBrunchIncluded" : true,
+        "isPoolIncluded" : false,
+        "isOceanViewIncluded" : true,
+        "roomThemeCount" : 3
+      } ],
+      "pageable" : {
+        "pageNumber" : 1,
+        "pageSize" : 10,
+        "sort" : {
+          "empty" : true,
+          "sorted" : false,
+          "unsorted" : true
+        },
+        "offset" : 10,
+        "paged" : true,
+        "unpaged" : false
+      },
+      "totalElements" : 11,
+      "totalPages" : 2,
+      "last" : true,
+      "size" : 10,
+      "number" : 1,
+      "sort" : {
+        "empty" : true,
+        "sorted" : false,
+        "unsorted" : true
+      },
+      "first" : false,
+      "numberOfElements" : 1,
+      "empty" : false
+    }
+  }
+}</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>message</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">응답 메시지</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Object</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">메인 페이지 상품 데이터</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.seoul</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Array</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">서울 지역 상품 목록</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.gangwon</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Array</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">강원 지역 상품 목록</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.busan</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Array</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">부산 지역 상품 목록</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.weekend</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Object</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">주말 특가 상품 목록</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="search-product">검색 조회 API 문서화</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>사용자가 요청한 조건에 맞는 상품들을 검색하여 반환하는 API입니다.</p>
+</div>
+<div class="sect2">
+<h3 id="_httprequest_5">HttpRequest</h3>
+<div class="paragraph">
+<p>include::C:\Users\wocjf\work\SCBJ-BE\build\generated-snippets/product-rest-controller-docs-test/</p>
+</div>
+<div class="paragraph">
+<p>Unresolved directive in product-api.adoc - include::C:\Users\wocjf\work\SCBJ-BE\build\generated-snippets/product-rest-controller-docs-test/search-product/http-request.adoc[]
+Unresolved directive in product-api.adoc - include::C:\Users\wocjf\work\SCBJ-BE\build\generated-snippets/product-rest-controller-docs-test/search-product/request-fields.adoc[]
+Unresolved directive in product-api.adoc - include::C:\Users\wocjf\work\SCBJ-BE\build\generated-snippets/product-rest-controller-docs-test/search-product/request-parameters.adoc[]</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_httpresponse_5">HttpResponse</h3>
+<div class="paragraph">
+<p>Unresolved directive in product-api.adoc - include::C:\Users\wocjf\work\SCBJ-BE\build\generated-snippets/product-rest-controller-docs-test/search-product/http-response.adoc[]
+Unresolved directive in product-api.adoc - include::C:\Users\wocjf\work\SCBJ-BE\build\generated-snippets/product-rest-controller-docs-test/search-product/response-fields.adoc[]</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+   </details>
+   <details>
+    <summary>예약 내역 API</summary>
+    <div id="content">
+<div class="sect1">
+<h2 id="_reservation_rest_api_docs">Reservation REST API Docs</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="Reservation-Get">야놀자 예약 내역 조회</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>야놀자 예약 내역을 조회하는 API 입니다.</p>
+</div>
+<div class="sect2">
+<h3 id="_httprequest">HttpRequest</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">GET /v1/reservations HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Authorization: ACCESS_TOKEN
+Host: localhost:8080</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_httpresponse">HttpResponse</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">HTTP/1.1 200 OK
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json;charset=UTF-8
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Length: 1364
+
+{
+  "message" : "예약 내역 조회에 성공했습니다.",
+  "data" : [ {
+    "reservationId" : 31,
+    "hotelName" : "SR 호텔 서울 마곡",
+    "imageUrl" : "https://yaimg.yanolja.com/v5/2022/09/20/13/1280/6329c608da8fb4.46198346.jpg",
+    "roomName" : "체크인 시 배정",
+    "startDate" : "2024-02-06T11:00:00",
+    "endDate" : "2024-02-08T22:00:00",
+    "refundPrice" : 216000,
+    "purchasePrice" : 216000,
+    "remainingDays" : 10,
+    "remainingTimes" : 260
+  }, {
+    "reservationId" : 275,
+    "hotelName" : "UH FLAT the 송도",
+    "imageUrl" : "https://yaimg.yanolja.com/v5/2023/02/15/16/1280/63ed0f80af0cb7.13475065.png",
+    "roomName" : "1C-1 TYPE 또는 1C TYPE 랜덤배정",
+    "startDate" : "2024-02-19T18:00:00",
+    "endDate" : "2024-02-21T11:00:00",
+    "refundPrice" : 368000,
+    "purchasePrice" : 368000,
+    "remainingDays" : 24,
+    "remainingTimes" : 279
+  }, {
+    "reservationId" : 279,
+    "hotelName" : "오크우드 프리미어 인천",
+    "imageUrl" : "https://yaimg.yanolja.com/v5/2023/04/13/08/1280/6437c13b5d8c65.25779609.png",
+    "roomName" : "스튜디오 슈페리어 룸",
+    "startDate" : "2024-02-07T15:00:00",
+    "endDate" : "2024-02-09T11:00:00",
+    "refundPrice" : 279000,
+    "purchasePrice" : 279000,
+    "remainingDays" : 12,
+    "remainingTimes" : 288
+  } ]
+}</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>message</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">응답 메시지</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Array</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">응답 데이터</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data[].reservationId</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">예약 식별자</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data[].hotelName</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">호텔 이름</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data[].imageUrl</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">이미지 url</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data[].roomName</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">객실 이름</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data[].startDate</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">시작일</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data[].endDate</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">종료일</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data[].refundPrice</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">환불가</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data[].purchasePrice</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">구매가</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data[].remainingDays</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">남은 날짜</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data[].remainingTimes</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">남은 시간</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+   </details>
+   <details>
+    <summary>결제 API</summary>
+    <div id="content">
+<div class="sect1">
+<h2 id="_payment_rest_api_docs">Payment REST API Docs</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="prepare-payment">결제 요청</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>결제를 요청하는 API 입니다.</p>
+</div>
+<div class="sect2">
+<h3 id="_httprequest">HttpRequest</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">POST /v1/products/1/payments?paymentType=kakaoPaymentService HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Authorization: ACCESS_TOKEN
+Content-Length: 260
+Host: localhost:8080
+
+{
+  "isAgeOver14" : true,
+  "customerName" : "김양도",
+  "customerEmail" : "email@naver.com",
+  "customerPhoneNumber" : "010-1234-1234",
+  "useAgree" : true,
+  "cancelAndRefund" : true,
+  "collectPersonalInfo" : true,
+  "thirdPartySharing" : true
+}</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. /v1/products/{product_id}/payments</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Parameter</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>product_id</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">상품 식별자</p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Parameter</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>paymentType</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">결제 타입</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_httpresponse">HttpResponse</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">HTTP/1.1 200 OK
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json;charset=UTF-8
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Length: 143
+
+{
+  "message" : "결제에 요청에 성공했습니다.",
+  "data" : {
+    "url" : "https://percenthotel.web.app/payment/66/cancel"
+  }
+}</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>message</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">응답 메시지</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Object</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">응답 데이터</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.url</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">카카오페이 결제 url</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="Payment-Success">결제 성공</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>결제를 성공하는 API 입니다.</p>
+</div>
+<div class="sect2">
+<h3 id="_httprequest_2">HttpRequest</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">GET /v1/products/pay-success?memberId=1&amp;paymentType=kakaoPaymentService&amp;pg_token=pg_token1234567890 HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Host: localhost:8080</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_httpresponse_2">HttpResponse</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">HTTP/1.1 200 OK
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json;charset=UTF-8
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Length: 69
+
+{
+  "message" : "결제에 성공했습니다.",
+  "data" : null
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="Payment-Fail">결제 실패</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>결제를 실패하는 API 입니다.</p>
+</div>
+<div class="sect2">
+<h3 id="_httprequest_3">HttpRequest</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">GET /v1/products/pay-cancel?memberId=1&amp;paymentType=kakaoPaymentService HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Host: localhost:8080</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_httpresponse_3">HttpResponse</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">HTTP/1.1 200 OK
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json;charset=UTF-8
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Length: 69
+
+{
+  "message" : "결제에 실패했습니다.",
+  "data" : null
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+   </details>
+   <details>
+    <summary>구매내역 API</summary>
+    <div id="content">
+<div class="sect1">
+<h2 id="_paymenthistory_rest_api_docs">PaymentHistory REST API Docs</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="PaymentHistory-Specific-get">구매내역 상세 조회</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>구매내역을 상세 조회하는 API 입니다.</p>
+</div>
+<div class="sect2">
+<h3 id="_httprequest">HttpRequest</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">GET /v1/members/purchased-history/1 HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Authorization: ACCESS_TOKEN
+Host: localhost:8080</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. /v1/members/purchased-history/{paymentHistory_id}</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Parameter</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>paymentHistory_id</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">구매내역 식별자</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_httpresponse">HttpResponse</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">HTTP/1.1 200 OK
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json;charset=UTF-8
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Length: 687
+
+{
+  "message" : "구매 내역 상세 조회를 성공했습니다.",
+  "data" : {
+    "hotelName" : "SR 호텔 서울 마곡",
+    "roomName" : "체크인 시 배정",
+    "standardPeople" : 2,
+    "maxPeople" : 4,
+    "checkIn" : "24.02.06 (일) 15:00",
+    "checkOut" : "24.02.08 (월) 11:00",
+    "customerName" : "김호텔",
+    "customerPhoneNumber" : "010-1234-5678",
+    "paymentHistoryId" : 1,
+    "paymentType" : "카카오페이",
+    "originalPrice" : 216000,
+    "price" : 180000,
+    "remainingDays" : 10,
+    "paymentHistoryDate" : "24.01.26 (금)",
+    "hotelImage" : "https://yaimg.yanolja.com/v5/2022/09/20/13/1280/6329c608da8fb4.46198346.jpg"
+  }
+}</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>message</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">응답 메시지</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Object</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">응답 데이터</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.hotelName</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">호텔 이름</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.roomName</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">객실 이름</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.standardPeople</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">기준 인원</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.maxPeople</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">최대 인원</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.checkIn</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">체크인</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.checkOut</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">체크아웃</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.customerName</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">이용자 이름</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.customerPhoneNumber</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">이용자 번호</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.paymentHistoryId</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">예약 번호</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.paymentType</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">결제 수단</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.originalPrice</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">정가</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.price</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">구매가</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.remainingDays</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">남은 날짜</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.paymentHistoryDate</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">남은 시간</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.hotelImage</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">이미지</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="find-payment-page">결제 페이지 조회</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>결제 페이지를 조회하는 API입니다.</p>
+</div>
+<div class="sect2">
+<h3 id="_httprequest_2">HttpRequest</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">GET /v1/products/1/payments HTTP/1.1
+Authorization: ACCESS_TOKEN
+Host: localhost:8080</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 2. /v1/products/{product_id}/payments</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Parameter</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>product_id</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">상품 식별자</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_httpresponse_2">HttpResponse</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">HTTP/1.1 200 OK
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json;charset=UTF-8
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Length: 488
+
+{
+  "message" : "결제 페이지 조회에 성공했습니다.",
+  "data" : {
+    "hotelImage" : "https://yaimg.yanolja.com/v5/2023/03/23/15/1280/641c76db5ab761.18136153.jpg",
+    "hotelName" : "양도 호텔",
+    "roomName" : "호텔 인 나인 강남",
+    "standardPeople" : 2,
+    "maxPeople" : 4,
+    "checkInDateTime" : "2024-01-29T11:49:47.8468055",
+    "checkOutDateTime" : "2024-01-30T11:49:47.8468055",
+    "originalPrice" : 200000,
+    "salePrice" : 150000
+  }
+}</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>message</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">응답 메시지</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Object</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">응답 데이터</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.hotelImage</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">호텔 이미지</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.hotelName</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">호텔 이름</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.roomName</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">객실 이름</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.standardPeople</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">기준 인원</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.maxPeople</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">최대 인원</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.checkInDateTime</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">체크 인</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.checkOutDateTime</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">체크 아웃</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.originalPrice</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">원가</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.salePrice</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">판매가</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_구매_내역_목록_조회">구매 내역 목록 조회</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>사용자의 구매 내역 목록을 조회하는 API입니다.</p>
+</div>
+<div class="sect2">
+<h3 id="_httprequest_3">HttpRequest</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">GET /v1/members/purchased-history?page=0&amp;pageSize=10 HTTP/1.1
+Authorization: ACCESS_TOKEN
+Host: localhost:8080</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Unresolved directive in paymentHistory-api.adoc - include::C:\Users\wocjf\work\SCBJ-BE\build\generated-snippets/payment-history-rest-controller-docs-test/get-purchased-history/path-parameters.adoc[]</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_httpresponse_3">HttpResponse</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">HTTP/1.1 200 OK
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json;charset=UTF-8
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Length: 661
+
+{
+  "message" : "조회에 성공하였습니다.",
+  "data" : [ {
+    "id" : 1,
+    "createdAt" : "2024-01-29T11:49:47.9864639",
+    "imageUrl" : "wwww.yanolja.com",
+    "name" : "A 호텔",
+    "roomType" : "디럭스",
+    "price" : 20000,
+    "checkInDate" : "2024-01-29T11:49:47.9864639",
+    "checkOutDate" : "2024-01-31T11:49:47.9864639"
+  }, {
+    "id" : 2,
+    "createdAt" : "2024-01-26T11:49:47.9864639",
+    "imageUrl" : "wwww.yanolja.com",
+    "name" : "B 호텔",
+    "roomType" : "스텐다드",
+    "price" : 15000,
+    "checkInDate" : "2024-01-28T11:49:47.9864639",
+    "checkOutDate" : "2024-01-30T11:49:47.9864639"
+  } ]
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Unresolved directive in paymentHistory-api.adoc - include::C:\Users\wocjf\work\SCBJ-BE\build\generated-snippets/payment-history-rest-controller-docs-test/get-purchased-history/response-fields.adoc[]</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="saleHisotry-list">판매 내역 목록 조회</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>판매 내역 목록을 조회하는 API입니다.</p>
+</div>
+<div class="sect2">
+<h3 id="_httprequest_4">HttpRequest</h3>
+<div class="paragraph">
+<p>Unresolved directive in paymentHistory-api.adoc - include::C:\Users\wocjf\work\SCBJ-BE\build\generated-snippets/payment-history-rest-controller-docs-test/get-sale-history/http-request.adoc[]
+Unresolved directive in paymentHistory-api.adoc - include::C:\Users\wocjf\work\SCBJ-BE\build\generated-snippets/payment-history-rest-controller-docs-test/get-sale-history/path-parameters.adoc[]</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_httpresponse_4">HttpResponse</h3>
+<div class="paragraph">
+<p>Unresolved directive in paymentHistory-api.adoc - include::C:\Users\wocjf\work\SCBJ-BE\build\generated-snippets/payment-history-rest-controller-docs-test/get-sale-history/http-response.adoc[]
+Unresolved directive in paymentHistory-api.adoc - include::C:\Users\wocjf\work\SCBJ-BE\build\generated-snippets/payment-history-rest-controller-docs-test/get-sale-history/response-fields.adoc[]</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_판매_내역_상세_조회">판매 내역 상세 조회</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>특정 판매 내역을 상세 조회하는 API입니다.</p>
+</div>
+<div class="sect2">
+<h3 id="_httprequest_5">HttpRequest</h3>
+<div class="paragraph">
+<p>Unresolved directive in paymentHistory-api.adoc - include::C:\Users\wocjf\work\SCBJ-BE\build\generated-snippets/payment-history-rest-controller-docs-test/get-specific-sale-history/http-request.adoc[]
+Unresolved directive in paymentHistory-api.adoc - include::C:\Users\wocjf\work\SCBJ-BE\build\generated-snippets/payment-history-rest-controller-docs-test/get-specific-sale-history/path-parameters.adoc[]</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_httpresponse_5">HttpResponse</h3>
+<div class="paragraph">
+<p>Unresolved directive in paymentHistory-api.adoc - include::C:\Users\wocjf\work\SCBJ-BE\build\generated-snippets/payment-history-rest-controller-docs-test/get-specific-sale-history/http-response.adoc[]
+Unresolved directive in paymentHistory-api.adoc - include::C:\Users\wocjf\work\SCBJ-BE\build\generated-snippets/payment-history-rest-controller-docs-test/get-specific-sale-history/response-fields.adoc[]</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+   </details>
+   <details>
+    <summary>알림 API</summary>
+    <div id="content">
+<div class="sect1">
+<h2 id="_alarm_rest_api_docs">Alarm REST API Docs</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="get-alarms">알람 조회</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>알람를 조회하는 API 입니다.</p>
+</div>
+<div class="sect2">
+<h3 id="_httprequest">HttpRequest</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">GET /v1/alarms HTTP/1.1
+Authorization: ACCESS_TOKEN
+Host: localhost:8080</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Authorization</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JWT 액세스 토큰</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_httpresponse">HttpResponse</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">HTTP/1.1 200 OK
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json;charset=UTF-8
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Length: 263
+
+{
+  "message" : "알람 조회에 성공했습니다.",
+  "data" : [ {
+    "id" : null,
+    "title" : "알림 TEST 제목입니다.",
+    "content" : "알림 TEST 내용입니다.",
+    "date" : "2024-01-29T11:49:12.8301092",
+    "isRead" : false
+  } ]
+}</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>message</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">응답 메시지</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data[].id</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class java.lang.Number</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">사용자 식별자</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data[].title</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class java.lang.String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">알림 제목</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data[].content</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class java.lang.String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">알림 내용</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data[].date</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class java.time.LocalDateTime</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">알림 발생일</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data[].isRead</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class java.lang.Boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">알림 읽음 여부</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="has-non-read-alarm">안 읽은 알림 있는지 여부</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>안 읽은 알림이 있는지 확인하는 API 입니다.</p>
+</div>
+<div class="sect2">
+<h3 id="_httprequest_2">HttpRequest</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">GET /v1/alarms/status HTTP/1.1
+Authorization: ACCESS_TOKEN
+Host: localhost:8080</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Authorization</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">JWT 액세스 토큰</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_httpresponse_2">HttpResponse</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight nowrap"><code class="language-http" data-lang="http">HTTP/1.1 200 OK
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Type: application/json;charset=UTF-8
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Length: 122
+
+{
+  "message" : "알람 읽음 여부 조회에 성공했습니다.",
+  "data" : {
+    "hasNonReadAlarm" : true
+  }
+}</code></pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Path</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>message</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">응답 메시지</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data.hasNonReadAlarm</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>class java.lang.Boolean</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">안 읽음 알림 있는지 여부</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+   </details>
+   
+</details>
