@@ -33,9 +33,11 @@
 - BE: [https://3.34.147.187.nip.io/](https://3.34.147.187.nip.io/)
 - FE: [https://shimpyo.netlify.app/](https://percenthotel.web.app/)
 
+
 ## 🥺 RestDocs
 - SCBJ Application을 실행시키시면, index.html을 통해 확인하실 수 있습니다 😄
 - Index.html : https://3.34.147.187.nip.io/docs/index.html 
+
 
 ## 🛠️ 기술 스택
 
@@ -61,6 +63,146 @@ Infra & ThirdParty</br>
 
 ## ARCHITECTURE
 ![숙취방지 최종 ARCHITECTURE](https://github.com/SCBJ-7/SCBJ-BE/assets/63856521/74661494-beb8-4ae7-a7d5-d864b4ac64dc)
+
+## 📖 Sprint별 회고
+<details>
+ <summary>1차 Sprint 회고</summary>
+ 
+ ## Keep
+
+- 월, 수, (금) 대면 회의가 개발 진행에 수월하다.
+    - 격일로 모여서 스트레스가 덜 받는다.
+- Discussion, Issue, Actions 등 github를 적극적으로 사용해서 좋다.
+
+## Problem
+
+1. 부족한 코드리뷰
+2. Issue, PR 범위가 너무 크다.
+3. Convention/코드 스타일 통일
+4. 모르는 것을 직면했을 때 질문하기 어려웠다. 
+
+## Try
+
+1. 코드리뷰 룰 정의
+    
+    ```
+    ### 📌 PR 진행 시 이러한 점들을 참고해 주세요
+    * Reviewer 분들은 코드 리뷰 시 좋은 코드의 방향을 제시하되, 코드 수정을 강제하지 말아 주세요.
+    * Reviewer 분들은 좋은 코드를 발견한 경우, 칭찬과 격려를 아끼지 말아 주세요.
+    * Review는 특수한 케이스가 아니면 Reviewer로 지정된 시점 기준으로 3일 이내에 진행해 주세요.
+    * Comment 작성 시 Prefix로 P1, P2, P3 를 적어 주시면 Assignee가 보다 명확하게 Comment에 대해 대응할 수 있어요
+        * P1 : 꼭 반영해 주세요 (Request Changes) - 이슈가 발생하거나 취약점이 발견되는 케이스 등
+        * P2 : 반영을 적극적으로 고려해 주시면 좋을 것 같아요 (Comment)
+        * P3 : 이런 방법도 있을 것 같아요~ 등의 사소한 의견입니다 (Chore)
+    
+    ```
+    
+    1. 선칭찬, 후리뷰(+근거링크)
+    2. Pn 룰 적용 ✅
+        1. P1 : 꼭 반영해주세요 (Request Changes)
+        2. P2 : 반영을 적극적으로 고려해주시면 좋을 것 같아요 (Comment)
+        3. P3 : 이런 방법도 있을 것 같아요,사소한 의견 (Chore)
+    3. 만약 리뷰할 내용이 없고, 잘 완성된 코드라고 생각시
+        1. 맨 마지막 파일의 마지막 코드에 **“칭찬”** 남겨주기 ! 
+    4. D-n 룰 적용 🚫
+        
+        → 하루 단위로 모두 체크를 해주고 있기에 추가하지 않기로 결정
+        
+    
+    🔗 https://devocean.sk.com/blog/techBoardDetail.do?ID=165255
+    
+    🔗 https://techblog.woowahan.com/7152/
+    
+2. 서로 합의 하에 PR 범위를 쪼개자
+    - Issue : 큰 개발 범위를 작성
+        - 기획 변동으로 인한 개발 수정 : 새로운 ISSUE 화
+        - 내 실수로 인한 수정 : 기존 ISSUE에 추가
+    - PR : Issue를 쪼개서 올리기
+        1. 비즈니스 로직
+        2. 테스트 로직
+        
+        → 비즈니스 로직을 좀 더 쪼개려고 했으나, merge가 되지 않으면 개발하지 못할 수 있는 상황을 없애고자 일단 비즈니스 ↔ 테스트만 쪼갠다.
+        
+        최소한 테스트, 비즈니스 로직은 쪼개기
+        
+3. 코드 스타일 통일 | 컨벤션 통일
+    - Record 사용
+        - DTO 사용시 Setter 사용 금지, Getter 만 사용해왔음
+        - 그러므로, 현재 사용하는 dto와 Record의 차이가 많이 없다고 판단
+        - 또한, 오히려 Record는 자동으로 Getter를 생성해주고, equals, hashcode, toString을 자동으로 생성해준다는 점에서 훨씬 이점이 있다고 느껴졌습니다.
+        - ✅ 결과 : DTO → Record 사용하자 -!!!
+        
+        🔗 https://s7won.tistory.com/2
+        
+    - Controller ResponseEntity + Message 통일
+        
+        ```
+        @ResponseStatus(Ok)
+        
+        ResponseEntity.body(ResponseDTO.res
+        (productService.postProduct(securityUtil.getCurrentMemberId(), 
+        reservationId, productPostRequest),"성공적으로 비밀번호를 변경했습니다."))
+        ```
+        
+        - Message : ~을/를/에 성공했습니다.
+4. 질문은 최대한 Discussion을 활용하자
+    1. 페어 프로그래머에게 많이 해주자
+</details>
+<details>
+ <summary>2차 Sprint 회고</summary>
+
+ ## Keep
+
+- P1, P2, P3 체계가 좋습니다.
+- 페어 프로그래밍 진행
+
+## Problem
+
+1. 늦은 pr 확인 속도
+2. PR 올릴 때 포맷팅 확인하기 
+    1. Ctrl  + alt + L
+    2. Ctrl + alt + O 
+
+## Try
+
+1. PR 확인, Discussion 확인 시간대 확정
+    1. 월, 수, (금) : 11시 10분, 18시
+    2. 화, 목 , (금) : 10 시 15분, 18시 
+    3. 토~일 : 금요일 22시까지 PR 체크 모두 완료시 토,일은 선택
+        
+        만약 안될 경우, 토~일 중 PR 확인 언급 
+        
+2. Discussion 은 언급이 필요한 상대에게 언급해주기 
+3. 로직 & 테스트를 같이 올려야 하는 이유
+    1. 테스트 작성시, 로직 코드 변경 ISSUE
+    2. 로직 변경시, 로직 올리고 & 테스트 올리고 하면서 이전 PR들의 테스트가 안될 수 있음
+    
+    ⇒ 로직 & 테스트 같이 올리기 ⚠️
+    
+4. PR 올릴 때는 주요로 봐야하는 파일 명시해주기 !!! 
+5. 카톡 [공지] → 체크 이모지 ✅
+6. application.prod 파일 만들기 → 재철님 
+7. response type에 대해서 fe와 합의하기 → 12:30 데일리스크럼에서 회의 시간 잡자고 언급하기
+</details>
+<details>
+ <summary>3차 Sprint 회고</summary>
+
+ ## Keep
+
+- 정한 시간에 pr 확인하는 것 좋습니다.
+- 다양한 시도하는 것 좋았다.
+- pr 리뷰마다 p1, p2, p3 단계 지정하기
+
+## Problem
+
+1. 4주차 Sprint 부터 hotfix를 어떻게 할지
+
+## Try
+
+1. 브랜치 명에 Hotfix 도입
+    1. Hotfix는 pr시 1명만 체크해도 가능하게 진행 (4차 스프린트는 모두 pr 1명만 진행)
+    2. Hotfix pr 올리고 카톡에 언급하기 (pr링크를 같이 올리기)
+</details>
 
 ## :100: 숙취 방지의 자랑
 ![image](https://github.com/wocjf0513/scbj-accommodation-transfer-system/assets/59725406/89899760-ae93-4b62-aa88-1273a7068e6c)
