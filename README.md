@@ -26,17 +26,16 @@
 [패스트캠퍼스X야놀자: 백엔드 개발 부트캠프 파이널 프로젝트](https://blog.naver.com/wocjf0513/223341119477)
 
 ## :alarm_clock: 프로젝트 기간
-`2023-12-11 ~ 2023-01-29`
+`2023-12-11 ~ 2024-01-29`
 
 ## 🔗 배포 링크
 
-- BE: [https://3.34.147.187.nip.io/](https://3.34.147.187.nip.io/)
-- FE: [https://percenthotel.web.app/](https://percenthotel.web.app/)
+- BE: [백엔드 배포 서버](https://3.35.83.30.nip.io/)
+- FE: [배포 서버](https://percenthotel.web.app/)
 
 
 ## 🥺 RestDocs
-- SCBJ Application을 실행시키시면, index.html을 통해 확인하실 수 있습니다 😄
-- Index.html : https://3.34.147.187.nip.io/docs/index.html 
+- [API 명세서](https://3.35.83.30.nip.io/docs/index.html)
 
 
 ## 🛠️ 기술 스택
